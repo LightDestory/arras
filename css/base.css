@@ -548,7 +548,7 @@ label.error				{ border: 1px solid #D8000C; color: #D8000C; background: #FFBABA;
 
 /* post and comment navigation */
 .navigation  {
-	margin: 0 10px 20px 0;
+	margin: 0 0 20px 0;
 	text-align: center;
 }
 
@@ -1281,7 +1281,7 @@ label.error				{ border: 1px solid #D8000C; color: #D8000C; background: #FFBABA;
 	line-height: 1em;
 	color: #333;
 	font-weight: 700;
-	margin: 0 10px 0 0;
+	margin: 0;
 	padding: 7px 10px;
 	border: 1px solid #CCC;
 	display: block;
@@ -1426,7 +1426,7 @@ label.error				{ border: 1px solid #D8000C; color: #D8000C; background: #FFBABA;
 /* Comments (Form) */
 
 .comment-form {
-	margin: 0 10px 10px 0;
+	margin: 0 0 10px 0;
 	padding: 10px;
 	overflow: hidden;
 	background: #fff;
@@ -1452,7 +1452,7 @@ label.error				{ border: 1px solid #D8000C; color: #D8000C; background: #FFBABA;
 	border: solid #CCC;
 	border-width: 0 1px 1px;
 	padding: 15px 10px;
-	margin: 0 10px 10px 0;
+	margin: 0 0 10px 0;
 }
 
 
