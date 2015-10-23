@@ -1326,7 +1326,7 @@ label.error				{ border: 1px solid #D8000C; color: #D8000C; background: #FFBABA;
 .comment-list {
 	list-style: none;
 	padding: 10px 10px 0;
-	margin: 0 10px 0 0;
+	margin: 0;
 	background: #F0F0F0;
 	border: solid #CCC;
 	border-width: 0 1px;
