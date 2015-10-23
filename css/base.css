@@ -1020,7 +1020,7 @@ label.error				{ border: 1px solid #D8000C; color: #D8000C; background: #FFBABA;
 .posts-line {
 	background: #FFF;
 	border: 1px solid #CCC;
-	margin: 0 10px 10px 0;
+	margin: 0 0 10px 0;
 	padding: 0 10px 10px;
 	line-height: 25px;
 }
@@ -1149,7 +1149,7 @@ label.error				{ border: 1px solid #D8000C; color: #D8000C; background: #FFBABA;
 .traditional .single-post {
 	background: #FFF;
 	border: 1px solid #CCC;
-	margin: 0 10px 15px 0;
+	margin: 0 0 15px 0;
 	padding: 0 15px;
 }
 
