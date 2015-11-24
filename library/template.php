@@ -12,41 +12,6 @@
  *
  */
 
-/** ===== Header support functions ===== */
-
-add_action( 'wp_head', 'arras_favicons' );
-/**
- * Outputs available favicons
- * @return null Outputs favicon html for use in <head>
- */
-function arras_favicons() {
-	$color = '#123456';
-	$type = 'image/png';
-	$favicon = esc_url( arras_get_option( 'favicon' ) );
-	$apple_icon = esc_url( arras_get_option( 'appleicon' ) );
-	$ms_tile_color = esc_attr( $color );
-	$ms_tile_image = esc_url( arras_get_option( 'mstileimage' ) );
-
-	if ( ! $favicon ) {
-		$type = 'image/x-icon';
-		if ( ! file_exists( ABSPATH . 'favicon.ico' ) ) {
-			$favicon = get_stylesheet_directory_uri() . '/images/favicon.ico';
-		} else {
-			$favicon = get_site_url( 'favicon.ico' );
-		}
-	}
-	echo '<link rel="icon" type="' . $type . '" href="' . $favicon . '" />';
-	if ( '' != $apple_icon ) {
-		echo '<link rel="apple-touch-icon-precomposed" href="' . $apple_icon . '" />';
-	}
-	if ( '' != $ms_tile_color ) {
-		echo '<meta name="msapplication-TileColor" content="' . $ms_tile_color . '" />';
-	}
-	if ( '' != $ms_tile_image ) {
-		echo '<meta name="msapplication-TileImage" content="' . $ms_tile_image . '" />';
-	}
-} // end arras_favicons()
-
 /**
  * Generates HTML for custom logo, if one is set
  * @return null
