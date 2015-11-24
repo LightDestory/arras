@@ -25,4 +25,8 @@ function arras_scripts() {
 	if ( is_singular() ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
+
+	wp_enqueue_script( 'arras-html5', get_template_directory_uri() . '/assets/scripts/html5.js', array(), '3.7.3' );
+	wp_script_add_data( 'arras-html5', 'conditional', 'lt IE 9' );
+	
 }

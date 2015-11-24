@@ -12,12 +12,13 @@
 <html <?php language_attributes(); ?>>
 
 <head>
-	<meta charset="<?php bloginfo('charset'); ?>" />
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta charset="<?php bloginfo( 'charset' ); ?>"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
 	<link rel="profile" href="http://gmpg.org/xfn/11">
-	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
-
-	<?php wp_head(); // loads all the other <head> stuff ?>
+	<?php if ( is_singular() && pings_open( get_queried_object() ) ) : ?>
+		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+	<?php endif; ?>
+	<?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
@@ -37,22 +38,27 @@
 	<header id="header" class="page-header section">
 		<div id="branding" class="top-banner wrap group">
 			<div class="logo col span_2_of_3">
-				<a class="home-link" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-				<?php if ( arras_get_option( 'site_logo' ) ) :
-					arras_add_custom_logo();
-				else: ?>
-					<h1 class="site-title"><?php bloginfo( 'name' ); ?></h1>
-				<?php endif; ?>
-				<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
+				<a class="home-link" href="<?php echo esc_url( home_url( '/' ) ); ?>"
+				   title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+					<?php if ( arras_get_option( 'site_logo' ) ) :
+						arras_add_custom_logo();
+					else: ?>
+						<h1 class="site-title"><?php bloginfo( 'name' ); ?></h1>
+					<?php endif; ?>
+					<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
 				</a>
 			</div>
 			<div class="sidebar headerwidgets col span_1_of_3">
 				<ul class="xoxo">
-					<?php if ( dynamic_sidebar('Header Widgets') ) ; ?>
+					<?php if ( dynamic_sidebar( 'Header Widgets' ) ) {
+						;
+					} ?>
 				</ul>
 			</div>
-		</div><!-- #branding -->
-	</header><!-- #header -->
+		</div>
+		<!-- #branding -->
+	</header>
+	<!-- #header -->
 
 	<?php arras_above_nav(); ?>
 
