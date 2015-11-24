@@ -1,8 +1,6 @@
 <?php
 /**
- * Arras Theme Header
- *
- * Displays everything from begining to <div id="container">
+ * Arras page header template
  *
  * @package Arras
  */
@@ -22,7 +20,7 @@
 </head>
 
 <body <?php body_class(); ?>>
-<div id="page" class="hfeed site">
+<div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'arras' ); ?></a>
 
 	<?php arras_above_top_menu();
