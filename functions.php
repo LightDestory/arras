@@ -121,6 +121,7 @@ function arras_add_sidebars() {
 } // end arras_add_sidebars()
 
 /* Load theme library files */
+require_once ARRAS_LIB . '/autoloader.php';
 require_once ARRAS_LIB . '/actions.php';
 require_once ARRAS_LIB . '/custom-header.php';
 require_once ARRAS_LIB . '/customizer.php';
@@ -148,7 +149,6 @@ if ( is_admin() ) {
 	add_action( 'admin_menu', 'arras_addmenu' );
 
 }
-
 
 /**
  * Arras is now loaded. If you want your child theme to override
